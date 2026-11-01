@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
 
-## Getting Started
+## 🇮🇷 فارسی
 
-First, run the development server:
+### معرفی
+وب‌سایت شخصی برای معرفی مهارت‌ها، نمایش نمونه‌کارها، ارائه خدمات و دریافت پروژه‌های نرم‌افزاری با تمرکز بر SEO، عملکرد و تجربه کاربری.
+
+### تکنولوژی‌ها
+- **Next.js** — App Router و Static Export
+- **TypeScript** — توسعه تایپ‌امن
+- **Tailwind CSS 4 + daisyUI 5** — رابط کاربری
+- **Zustand** — مدیریت State
+- **Cloudflare Pages** — انتشار استاتیک
+
+### شروع سریع
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### قابلیت‌ها
+- تم روشن و تاریک با قابلیت توسعه برای تم‌های سفارشی
+- معماری چندزبانه با پشتیبانی از RTL و LTR
+- طراحی واکنش‌گرا و SEO محور
+- برنامه‌ریزی برای اتصال فرم تماس به Google Sheets
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build و انتشار
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+خروجی استاتیک در پوشه `out/` تولید می‌شود.
 
-To learn more about Next.js, take a look at the following resources:
+**Cloudflare Pages**
+- Build command: `npm run build`
+- Output directory: `out`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### وضعیت توسعه
+قابلیت‌های تم، چندزبانگی و صفحات سایت در حال توسعه هستند. اتصال فرم تماس به Google Sheets در برنامه توسعه آینده قرار دارد.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🇬🇧 English
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Overview
+A personal portfolio website for showcasing skills, projects, and services, and generating software development leads, with a focus on SEO, performance, and user experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Tech Stack
+- **Next.js** — App Router and Static Export
+- **TypeScript** — Type-safe development
+- **Tailwind CSS 4 + daisyUI 5** — UI components and styling
+- **Zustand** — State management
+- **Cloudflare Pages** — Static deployment
+
+### Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+### Features
+- Light and dark themes, extensible to custom themes
+- Multilingual architecture with RTL/LTR support
+- Responsive, SEO-focused design
+- Planned contact form integration with Google Sheets
+
+### Build & Deployment
+
+```bash
+npm run build
+```
+
+Static output is generated in the `out/` directory.
+
+**Cloudflare Pages**
+- Build command: `npm run build`
+- Output directory: `out`
+
+### Development Status
+Theme management, internationalization, and website pages are under development. Google Sheets integration is planned for a future phase.
