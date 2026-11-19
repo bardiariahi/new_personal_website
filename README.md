@@ -1,83 +1,26 @@
-# Personal Portfolio
+# Bardia Riahi — personal website
 
-## 🇮🇷 فارسی
+Bilingual English and Persian portfolio built with Next.js and statically exported for Cloudflare Pages. The production domain is `bardiariahi.ir`.
 
-### معرفی
-وب‌سایت شخصی برای معرفی مهارت‌ها، نمایش نمونه‌کارها، ارائه خدمات و دریافت پروژه‌های نرم‌افزاری با تمرکز بر SEO، عملکرد و تجربه کاربری.
+## Development
 
-### تکنولوژی‌ها
-- **Next.js** — App Router و Static Export
-- **TypeScript** — توسعه تایپ‌امن
-- **Tailwind CSS 4 + daisyUI 5** — رابط کاربری
-- **Zustand** — مدیریت State
-- **Cloudflare Pages** — انتشار استاتیک
+Use a supported Node.js version (Node 22.13 or later is recommended), then run:
 
-### شروع سریع
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
 ```
 
-### قابلیت‌ها
-- تم روشن و تاریک با قابلیت توسعه برای تم‌های سفارشی
-- معماری چندزبانه با پشتیبانی از RTL و LTR
-- طراحی واکنش‌گرا و SEO محور
-- برنامه‌ریزی برای اتصال فرم تماس به Google Sheets
+English is at `/en/`, Persian at `/fa/`. The root redirects to English on Cloudflare Pages; the generated root page also provides a browser fallback. Theme preference is saved locally.
 
-### Build و انتشار
+## Cloudflare Pages
 
-```bash
-npm run build
-```
+Connect the Git repository and use:
 
-خروجی استاتیک در پوشه `out/` تولید می‌شود.
-
-**Cloudflare Pages**
 - Build command: `npm run build`
-- Output directory: `out`
+- Build output directory: `out`
+- Production domain: `bardiariahi.ir`
 
-### وضعیت توسعه
-قابلیت‌های تم، چندزبانگی و صفحات سایت در حال توسعه هستند. اتصال فرم تماس به Google Sheets در برنامه توسعه آینده قرار دارد.
+The static export includes `_redirects`, `_headers`, `robots.txt`, and `sitemap.xml`. Check the production custom-domain and HTTPS configuration in Cloudflare before deployment. No application server is required.
 
----
-
-## 🇬🇧 English
-
-### Overview
-A personal portfolio website for showcasing skills, projects, and services, and generating software development leads, with a focus on SEO, performance, and user experience.
-
-### Tech Stack
-- **Next.js** — App Router and Static Export
-- **TypeScript** — Type-safe development
-- **Tailwind CSS 4 + daisyUI 5** — UI components and styling
-- **Zustand** — State management
-- **Cloudflare Pages** — Static deployment
-
-### Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
-### Features
-- Light and dark themes, extensible to custom themes
-- Multilingual architecture with RTL/LTR support
-- Responsive, SEO-focused design
-- Planned contact form integration with Google Sheets
-
-### Build & Deployment
-
-```bash
-npm run build
-```
-
-Static output is generated in the `out/` directory.
-
-**Cloudflare Pages**
-- Build command: `npm run build`
-- Output directory: `out`
-
-### Development Status
-Theme management, internationalization, and website pages are under development. Google Sheets integration is planned for a future phase.
+Each language has separate `/about/`, `/experience/`, `/expertise/`, and `/contact/` pages. The language switch keeps the current page. The selected language is reflected in the URL and stored in the browser; the root remains the requested English redirect.

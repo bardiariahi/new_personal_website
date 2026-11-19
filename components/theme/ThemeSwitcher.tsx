@@ -1,33 +1,12 @@
-
 "use client";
 
-import { useThemeStore } from "@/store/useThemeStore";
-
-export default function ThemeSwitcher() {
-  const themes = useThemeStore((state) => state.themes);
-  const activeThemeId = useThemeStore(
-    (state) => state.activeThemeId
-  );
-  const setTheme = useThemeStore((state) => state.setTheme);
-
-  return (
-    <div className="flex flex-col gap-2 w-full max-w-xs">
-      <label htmlFor="theme-select" className="text-sm font-medium">
-        انتخاب تم سایت
-      </label>
-
-      <select
-        id="theme-select"
-        className="select select-md w-full"
-        value={activeThemeId}
-        onChange={(event) => setTheme(event.target.value)}
-      >
-        {themes.map((theme) => (
-          <option key={theme.id} value={theme.id}>
-            {theme.name}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
+export default function ThemeSwitcher({ fa }: { fa: boolean }) {
+  function toggle() {
+    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("theme", next); } catch {}
+  }
+  return <button className="theme-toggle" type="button" onClick={toggle} aria-label={fa ? "تغییر تم روشن یا تیره" : "Toggle light or dark theme"} title={fa ? "تغییر تم" : "Change theme"}>
+    <span className="theme-track" aria-hidden="true"><span className="theme-stars">✦</span><span className="theme-knob"><span className="theme-sun">☀</span><span className="theme-moon">☾</span></span></span>
+  </button>;
 }
