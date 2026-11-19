@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import Lottie from "lottie-react";
+import { Lottie } from "lottie-react";
 import animationData from "@/animations/developer-workspace.json";
 
 interface MousePosition {
@@ -56,13 +56,10 @@ export default function DeveloperAnimation() {
         }}
       >
         <Lottie
-          animationData={animationData}
+          src={animationData}
           loop
           autoplay
           className="h-auto w-full"
-          rendererSettings={{
-            preserveAspectRatio: "xMidYMid meet",
-          }}
         />
       </div>
     </div>
